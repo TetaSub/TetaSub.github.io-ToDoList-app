@@ -1,0 +1,197 @@
+@import "./fonts.scss";
+
+body {
+    font-family: 'Nunito', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    width: auto;
+}
+
+*,
+h3 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container {
+    background: #E9EDC9;
+    padding: 20px 50px;
+}
+
+.create-task-block,
+.filter-task-block {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.create-task-block {
+    margin-bottom: 20px;
+}
+
+.task-title {
+    margin: 0;
+}
+
+.task-input,
+.filter-input {
+    @extend %nunito-regular;
+    font-size: 14px;
+    line-height: 19px;
+    background: #FEFAE0 !important;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+@keyframes add-transition {
+    0% {
+        background: #ABC4AA;
+        font-weight: 700;
+        opacity: 0;
+    }
+
+    50% {
+        background: #ABC4AA;
+        font-weight: 700;
+        opacity: 0.6;
+    }
+
+    100% {
+        background: #ABC4AA;
+        font-weight: 700;
+        opacity: 1;
+    }
+}
+
+@keyframes clear-transition {
+    0% {
+        background: #EDC6B1;
+        opacity: 0;
+    }
+
+    50% {
+        background: #EDC6B1;
+        opacity: 0.6;
+    }
+
+    100% {
+        background: #EDC6B1;
+        opacity: 1;
+    }
+}
+
+.btn {
+    @extend %nunito-light;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    background: #CCD5AE;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+
+    &:hover {
+        animation-name: add-transition;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        cursor: pointer;
+    }
+}
+
+
+.clear-tasks {
+    @extend %nunito-light;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    background: #CCD5AE;
+    opacity: 0.5;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+
+    &:hover {
+        animation-name: clear-transition;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        cursor: pointer;
+    }
+}
+
+
+.collection-item {
+    @extend %nunito-light;
+    font-size: 14px;
+    margin-left: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    //list-style-type: square;
+    //list-style-position: inside;
+
+    .icon-item {
+        text-align: end;
+    }
+
+    .edit-item {
+        margin-right: 10px;
+        text-align: end;
+
+        .fa-edit {
+            font-size: 12px;
+        }
+    }
+
+    .delete-item {
+        margin-right: 10px;
+        text-align: end;
+
+        .fa-remove {
+            font-size: 14px;
+        }
+    }
+}
+
+.collection-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+@media all and (min-width: 700px) and (max-width: 1000px) {
+    .container {
+        padding: 50px 20%;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .container {
+        padding: 50px 60% 50px 50px;
+        background-image: url(/img/to-do-list.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 100px) center;
+        background-size: auto 70%;
+    }
+}

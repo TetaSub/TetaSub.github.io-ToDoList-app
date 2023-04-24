@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Parcel Sandbox</title>
-    <meta charset="UTF-8" />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="create-task-block">
-        <form class="create-task-form">
-          <h3 class="task-title">Нове завдання</h3>
-          <div class="input-field">
-            <input type="text" name="task" class="task-input" />
-          </div>
-          <button type="submit" class="btn">Додати завдання</button>
-        </form>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do App</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./src/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
 
-      <div class="filter-task-block">
-        <h3 class="task-title">Список завдань</h3>
+</head>
+
+<body>
+  <div class="container">
+    <div class="create-task-block">
+      <form class="create-task-form">
+        <h3 class="task-title">Нове завдання</h3>
         <div class="input-field">
-          <input
-            type="text"
-            name="filter"
-            class="filter-input"
-            placeholder="Пошук завдань"
-          />
+          <input type="text" name="task" class="task-input" />
         </div>
-
-        <ul class="collection"></ul>
-
-        <button class="clear-tasks">Видалити всі завдання</button>
-      </div>
+        <button type="submit" class="btn">Додати завдання</button>
+      </form>
     </div>
 
-    <script src="src/index.js"></script>
-  </body>
+    <div class="filter-task-block">
+      <h3 class="task-title">Список завдань</h3>
+      <div class="input-field">
+        <input type="text" name="filter" class="filter-input" placeholder="Пошук завдань" />
+      </div>
+
+      <ul class="collection"></ul>
+
+      <button class="clear-tasks">Видалити всі завдання</button>
+    </div>
+  </div>
+
+  <script src="./src/index.js"></script>
+</body>
+
 </html>
