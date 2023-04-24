@@ -124,7 +124,7 @@ h3 {
   padding: 10px;
   margin: 10px auto;
 }
-.clear-tasks:hover {
+.clear-tasks:active {
   animation-name: clear-transition;
   animation-duration: 1s;
   animation-timing-function: linear;

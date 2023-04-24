@@ -170,8 +170,12 @@ const removeTask = (event) => {
 };
 
 const clearTasks = () => {
-  taskList.innerHTML = "";
-  clearTasksFromLocalStorage();
+  const isApproved = confirm("Ви впевнені що хочете видалити вci завдання?");
+  if (isApproved) {
+    taskList.innerHTML = "";
+    taskInput.value = "";
+    clearTasksFromLocalStorage();    
+  }
 };
 
 
